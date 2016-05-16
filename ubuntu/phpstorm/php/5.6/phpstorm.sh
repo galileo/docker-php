@@ -1,4 +1,4 @@
-# !/usr/bin/env gasi bash
+#!/usr/bin/env bash
 
 # Run PHP for phpstorm through Docker
 
@@ -12,7 +12,7 @@ docker run -i \
 	--net=host \
 	--sig-proxy=true \
 	--pid=host \
-	galileo/php:5.6-phpunit-5-advanced \
+	galileo/php:5.6-xdebug-phpunit-5-advanced \
 	php -d memory_limit=-1 "$@"
 
 # Attributes explanation
