@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z $NAME_SUFFIX ];
-then
-    echo 'OKEJ'
-    NAME_SUFFIX="-d"
-fi
+NAME_SUFFIX="-d"
 
 if [ -z $1 ];
 then
@@ -20,12 +16,12 @@ rm -f /usr/local/bin/php${NAME_SUFFIX}
 rm -f /usr/local/bin/php${NAME_SUFFIX}x
 rm -f /usr/local/bin/phpunit${NAME_SUFFIX}
 rm -f /usr/local/bin/composer${NAME_SUFFIX}
-rm -f /usr/local/bin/php-storm${NAME_SUFFIX}
+rm -f /usr/local/bin/phpstorm${NAME_SUFFIX}
 rm -f /usr/local/bin/enter-php${NAME_SUFFIX}
 
 ln -s ${PWD}/ubuntu/phpstorm/php/$1/php.sh /usr/local/bin/php${NAME_SUFFIX}
 ln -s ${PWD}/ubuntu/phpstorm/php/$1/php-xdebug.sh /usr/local/bin/php${NAME_SUFFIX}x
-ln -s ${PWD}/ubuntu/phpstorm/php/$1/phpstorm.sh /usr/local/bin/php-storm${NAME_SUFFIX}
+ln -s ${PWD}/ubuntu/phpstorm/php/$1/phpstorm.sh /usr/local/bin/phpstorm${NAME_SUFFIX}
 ln -s ${PWD}/ubuntu/phpstorm/php/$1/phpunit.sh /usr/local/bin/phpunit${NAME_SUFFIX}
 ln -s ${PWD}/ubuntu/phpstorm/php/$1/composer.sh /usr/local/bin/composer${NAME_SUFFIX}
 ln -s ${PWD}/ubuntu/phpstorm/php/$1/php-enter-docker.sh /usr/local/bin/enter-php${NAME_SUFFIX}

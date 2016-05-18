@@ -9,5 +9,5 @@ docker run -ti \
 	--net=host \
 	--sig-proxy=true \
 	--pid=host \
-	galileo/php:5.6-phpunit-5-advanced \
+	galileo/php:5.6-advanced-phpunit-5 \
 	bash
